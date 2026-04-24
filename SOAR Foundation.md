@@ -61,3 +61,8 @@ Now lets try creating a playbook for detecting and preventing **Phishing Email A
 1. SOC gets an alert ➡️ Playbook kicks in.   
 
 <img src="Images/playbook.png">
+
+**Playbook Name**: Phishing email incident response.
+**Version**: 1.0
+**Severity**: High
+**Type**: Automated + Human assisted

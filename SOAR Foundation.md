@@ -68,8 +68,8 @@ Now lets try creating a playbook for detecting and preventing **Phishing Email A
 **Type**: Automated + Human assisted  
 
 ## 🎯 Objective
+
 To automatically detect, analyze, contain, and remediate phishing email attacks with minimal manual effort, using a SOAR platform.
----
 
 ## ⚡ Trigger
 The playbook is triggered when:
@@ -77,3 +77,22 @@ The playbook is triggered when:
 - Email security gateway (e.g., Proofpoint, Mimecast) flags a suspicious email
 - SIEM raises a phishing-related alert
 - A user reports a suspicious email manually
+
+## 🔁 Playbook Steps
+
+### Step 1 — Detection & Enrichment (Automated)
+
+> The SOAR platform automatically extracts details from the alert:
+
+- Sender's email address & IP
+- Embedded URLs → checked against VirusTotal / URLScan.io
+- Attachments → scanned via sandbox (e.g., Any.run)
+- Domain age check (newly registered = suspicious)
+
+### Step 2 — Threat Analysis (Automated + Analyst review)
+
+> SOAR scores the threat based on enrichment results.
+
+- If score is HIGH → proceed to containment
+- If score is LOW → mark as false positive, close ticket, log it
+

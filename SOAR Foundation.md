@@ -96,3 +96,46 @@ The playbook is triggered when:
 - If score is HIGH → proceed to containment
 - If score is LOW → mark as false positive, close ticket, log it
 
+### Step 3 — Containment (Automated)
+
+> Immediately stops the threat from spreading:
+
+- Block sender's email address and IP in email gateway
+- Quarantine the phishing email across all mailboxes
+- Disable / sinkhole malicious URLs at the firewall/proxy
+
+### Step 4 — User Investigation (Automated + Analyst)
+
+> Determine if the user interacted with the phishing email:
+
+- Pull email logs — did the user open it? Click links?
+- Check endpoint logs for any suspicious process launches
+- If needed, interview the user
+
+### Step 5 — Remediation (Automated + Analyst)
+
+If user clicked the link:
+
+- Isolate the endpoint from the network
+- Force reset of user credentials / passwords
+- Run a full endpoint malware scan (EDR tool)
+- Check for lateral movement or data exfiltration
+
+If user did NOT click:
+
+- Send a security awareness notification to the user
+- No further action needed
+
+### Step 6 — Notification & Escalation (Automated)
+
+- Notify the SOC analyst with a full incident summary
+- Create a ticket in JIRA / ServiceNow with all findings
+- If critical: escalate to Incident Response team
+
+### Step 7 — Documentation & Closure (Analyst)
+
+- Write a detailed incident report (what happened, timeline, impact)
+- Update threat intelligence feeds with new IOCs (Indicators of Compromise)
+- Conduct a lessons-learned review
+- Close the ticket officially
+

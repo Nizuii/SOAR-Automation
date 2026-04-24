@@ -59,3 +59,5 @@ Now lets try creating a playbook for detecting and preventing **Phishing Email A
 1. Employee clicks the link or opens the attachment.
 1. Attacker gains the access/ steal credentials/ drops malware.
 1. SOC gets an alert ➡️ Playbook kicks in.   
+
+<img src="Images/playbook.png">

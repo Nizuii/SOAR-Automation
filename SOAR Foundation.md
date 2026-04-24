@@ -28,3 +28,26 @@ SOAR has 3 pillars:
     <td>Isolating an infected machine automatically</td>
   </tr>
 </table>
+
+## What is SOAR Playbook?
+
+A Playbook is a step by step automated workflow that tells SOAR exactly what to do when a specific threat is detected. Lets think of it like a recipie:
+- **Trigger** ➡️ something happens (e.g., phishing email detected)
+- **Steps** ➡️ defined actions run in order
+- **Outcome** ➡️ threat is contained, ticket is created, analyst is notified
+
+## General playbook structure:
+
+```bash
+TRIGGER (Alert/Event)
+    ↓
+DETECTION & ENRICHMENT (gather more info)
+    ↓
+ANALYSIS (Is this a real threat?)
+    ↓
+CONTAINMENT (Stop the spread)
+    ↓
+REMEDIATION (Fix the damage)
+    ↓
+NOTIFICATION & DOCUMENTATION (Report it)
+```

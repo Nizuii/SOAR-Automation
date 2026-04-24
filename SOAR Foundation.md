@@ -51,3 +51,11 @@ REMEDIATION (Fix the damage)
     ↓
 NOTIFICATION & DOCUMENTATION (Report it)
 ```
+
+Now lets try creating a playbook for detecting and preventing **Phishing Email Attack**. But before we build the playbook we need to understand what happens during a phishing attack so the playbook makes sense:
+
+1. Attacker sends a malicious email (Fake link, malicious attachment, credential harvesting).
+1. Email lands in employee's inbox.
+1. Employee clicks the link or opens the attachment.
+1. Attacker gains the access/ steal credentials/ drops malware.
+1. SOC gets an alert ➡️ Playbook kicks in.   

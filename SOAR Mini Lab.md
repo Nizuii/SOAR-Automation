@@ -13,3 +13,5 @@ So Inorder to set up the lab I use AWS because my system was having low specs. I
 I have already setup the n8n playbook. The goal here is whenever any alert is triggered in the wazuh manager, we need to fordward the alert to the analyst via messaging applications. If the rule level is less than 7 then only send message to telegram. If rule level is freater than 7 and less than 12 then send message to both telegram and gmail. Else send message to telegram and discord. We also added abusive IP node to check the IP reputation to get the informations about the attacker IP if it is listed in the abusive IP database.
 
 <img width="1920" height="951" alt="image" src="https://github.com/user-attachments/assets/fb3635fc-85b1-4ac8-b3c1-e502d7e1d22e" />
+
+So here the workflow is like when ever an alert is trigged in wazuh

@@ -14,4 +14,4 @@ I have already setup the n8n playbook. The goal here is whenever any alert is tr
 
 <img width="1920" height="951" alt="image" src="https://github.com/user-attachments/assets/fb3635fc-85b1-4ac8-b3c1-e502d7e1d22e" />
 
-So here the workflow is like when ever an alert is trigged in wazuh
+So here the workflow is like when ever an alert is trigged in wazuh the wazuh sends the alert to the n8n webhook.

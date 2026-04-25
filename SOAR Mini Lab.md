@@ -15,3 +15,6 @@ I have already setup the n8n playbook. The goal here is whenever any alert is tr
 <img width="1920" height="951" alt="image" src="https://github.com/user-attachments/assets/fb3635fc-85b1-4ac8-b3c1-e502d7e1d22e" />
 
 So here the workflow is like when ever an alert is trigged in wazuh the wazuh sends the alert to the n8n webhook. Right after reaching the webhook we will be checking a condition to exclude duplicate alerts. We wont allow the same alert from the same alert trigger twice under 30 minutes. After deduplication we are checking the alert rule levels and based on rule severity we will be sending those alerts to the specific application (i.e, Telegram, Discord and Gmail). I am also pasting the message proof below that indicates the message recieved from the N8N:
+
+<img width="1920" height="951" alt="image" src="https://github.com/user-attachments/assets/09881b63-fe77-4f1a-92a5-fdb8bb204532" />
+<img width="1387" height="951" alt="image" src="https://github.com/user-attachments/assets/302a922b-0889-43e5-8913-71b0c36532c8" />
